@@ -94,6 +94,8 @@ docker exec -it dkr378php6_mysql-b bash
 
 docker exec -it dkr378php6mysqc bash
 
+docker exec -it dkr378php6c bash
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
