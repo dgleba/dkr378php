@@ -1,0 +1,55 @@
+# ./docker-compose.yml 192.168.88.46:6021
+
+version: '3'
+
+services:
+
+  web:
+    #image: php:7.2.2-apache
+    build: ./php
+    image: dkr378php6_php_c
+    restart: always
+    container_name: dkr378php6c
+    depends_on:
+      - db
+    env_file:
+      - env
+    volumes:
+      - /var/www/html/:/var/www/html/
+      
+      # - ./dkr378php6/php/xtra.php.ini:/etc/php5/apache2/conf.d/custom.php.ini
+      # https://stackoverflow.com/questions/41691584/docker-compose-wont-volume-my-php-ini-file
+      # - ./php/:/var/www/html/
+      # - ./dkr378php6/php:/usr/local/etc/php
+      # - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php5/fpm/conf.d/99-overrides.ini
+      
+    ports:
+      - "6021:80"
+    stdin_open: true
+    tty: true
+    networks:
+      - one
+    
+  db:
+    #image: mysql
+    build: ./mysql
+    image: dkr378php6_mysq_c
+    restart: always
+    container_name: dkr378php6mysqc
+    env_file:
+      - env
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+    ports:
+      - "3306:3306"
+    volumes:
+      - /home/file/mysqldata/:/var/lib/mysql/
+    networks:
+      - one
+
+networks:
+  one:
+    
