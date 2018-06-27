@@ -1,4 +1,46 @@
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+see installation at bottom of readme.md on this page..
+
+https://github.com/dgleba/public-static-page-xataface
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-06-27[Jun-Wed]16-48PM
+
+cd /var/www/html
+git clone https://github.com/dgleba/public-static-page-xataface.git actionlogin2
+cd actionlogin2
+touch templates_c/.keep
+cp config.dbc.example config.dbc
+cp conf-example.ini conf.ini
+cd ..
+git clone https://github.com/shannah/xataface.git
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+https://github.com/dgleba/public-static-page-xataface.git
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-06-27[Jun-Wed]16-33PM
+
+cd /var/www/html
+git clone https://github.com/dgleba/actionlogin-xataface.git actionlogin
+cd actionlogin
+touch templates_c/.keep
+cp config.dbc.example config.dbc
+cd ..
+git clone https://github.com/shannah/xataface.git
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Title:  .
 -----------------------2018-06-27[Jun-Wed]16-02PM
