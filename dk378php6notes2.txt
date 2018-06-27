@@ -212,5 +212,43 @@ Selected (0)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Title:  .
+-----------------------2018-06-26[Jun-Tue]20-37PM
+
+http://10.4.1.227:6021/actionlogin/index.php?&-table=users&-cursor=0&-skip=0&-limit=30&-mode=list
+
+this works in pmdsdata4 docker with port 6022 mysql.
+
+
+
+[_database]
+    host="localhost"
+    host=10.4.1.227:6022
+    name="hrdb"
+    name="test"
+    user="hruser"
+    user=root
+    password="hru4234"
+    password=root
+    driver=mysqli
+
+    
+http://10.4.1.227:6021/adminer/adminer.php?server=10.4.1.227%3A6022&username=root&db=test&select=users_xataface
+
+MySQL » 10.4.1.227:6022 » test » Select: users_xataface
+Select: users_xataface
+Select data Show structure Alter table New item
+ Action
+SELECT * FROM `users_xataface` LIMIT 50 (0.001 s) Edit
+
+ Modify	username	password	Role	comment_fld1	createdtime	updatedtime
+ edit	admin	adn	ADMIN	NULL	2015-10-05 15:25:55	NULL
+ edit	dgleba	c	ADMIN	NULL	2016-07-25 14:50:02	NULL
+ edit	pmdsdata	a	READ ONLY	NULL	2016-07-29 20:17:17	NULL
+ edit	qadave	qacd	ADMIN	NULL	2012-06-06 06:58:40	NULL
+ 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 =
