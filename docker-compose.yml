@@ -1,4 +1,4 @@
-# ./docker-compose.yml 192.168.88.46:6021
+# ./docker-compose.yml ,  192.168.88.46:6021
 
 version: '3'
 
@@ -7,9 +7,9 @@ services:
   web:
     #image: php:7.2.2-apache
     build: ./php
-    image: dkr378php6_php_c
+    image: dkr378php8
     restart: always
-    container_name: dkr378php6c
+    container_name: dkr378php8
     depends_on:
       - db
     env_file:
@@ -33,20 +33,20 @@ services:
   db:
     #image: mysql
     build: ./mysql
-    image: dkr378php6_mysq_c
+    image: dkr378php8mysq
     restart: always
-    container_name: dkr378php6mysqc
+    container_name: dkr378php8mysq
     env_file:
       - env
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: test
-      MYSQL_USER: dev
-      MYSQL_PASSWORD: dev
+    # environment:
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: test
+      # MYSQL_USER: dev
+      # MYSQL_PASSWORD: dev
     ports:
       - "6022:3306"
     volumes:
-      - /home/file/mysqldata/:/var/lib/mysql/
+      - /var/aa/mysql/:/var/lib/mysql/
     networks:
       - one
 
