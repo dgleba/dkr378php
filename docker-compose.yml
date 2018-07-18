@@ -31,8 +31,8 @@ services:
       - one
     
   db:
-    #image: mysql
-    build: ./mysql
+    image: mysql
+    #build: ./mysql
     image: dkr378php8mysq
     restart: always
     container_name: dkr378php8mysq
