@@ -31,11 +31,11 @@ services:
       - one
     
   db:
-    image: mysql
-    #build: ./mysql
-    image: dkr378php8mysq
+    #image: mysql
+    build: ./mysql
+    image: dkr378php9mysq
     restart: always
-    container_name: dkr378php8mysq
+    container_name: dkr378php9mysq
     env_file:
       - env
     # environment:
@@ -46,7 +46,7 @@ services:
     ports:
       - "6022:3306"
     volumes:
-      - /var/aa/mysql/:/var/lib/mysql/
+      - /var/aa/mysql2/:/var/lib/mysql/
     networks:
       - one
 
