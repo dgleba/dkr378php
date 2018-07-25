@@ -33,13 +33,13 @@ services:
     # make 'db' a known service/host inside of 'web'
     # use this to make a mysql connection to host 'db'
     # https://www.goodbytes.be/blog/article/docker-a-simple-example-for-a-php-mysql-setup
-    links:
-      - db
+    #links:
+    #  - db
     
   db:
-    #image: mysql
-    build: ./mysql
-    image: dkr378php9mysq
+    image: mysql:5.7
+    #build: ./mysql
+    #image: dkr378php9mysq
     restart: always
     container_name: dkr378php9mysq
     env_file:
