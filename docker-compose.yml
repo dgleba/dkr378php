@@ -10,6 +10,7 @@ services:
     image: dkr378php8
     restart: always
     container_name: dkr378php8
+    #  first load the 'db' service 
     depends_on:
       - db
     env_file:
@@ -29,6 +30,11 @@ services:
     tty: true
     networks:
       - one
+    # make 'db' a known service/host inside of 'web'
+    # use this to make a mysql connection to host 'db'
+    # https://www.goodbytes.be/blog/article/docker-a-simple-example-for-a-php-mysql-setup
+    links:
+      - db
     
   db:
     #image: mysql
